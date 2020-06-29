@@ -6,10 +6,8 @@ Basically, it involves scraping bank websites or calling API (if any), parsing a
 
 # Technologies used:
 
-👉Python + Flask
-
-👉PostgreSQL + SQLAlchemy
-
-👉BeautifulSoup & API
+* Python + Flask
+* PostgreSQL + SQLAlchemy
+* BeautifulSoup & API
 
 P.S. Needs adding try/except feature
