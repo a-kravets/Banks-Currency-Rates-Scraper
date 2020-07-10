@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ bank.name }}
+{% endblock %}
+
+{% block body %}
+
+    <h1></h1>
+        <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Bank</th>
+              <th scope="col">Date</th>
+              <th scope="col">USD Bid</th>
+              <th scope="col">USD Ask</th>
+              <th scope="col">EUR Bid</th>
+              <th scope="col">EUR Ask</th>
+            </tr>
+          </thead>
+
+          
+          <tbody>
+            {% for rate, bank in rates %}
+            <tr>
+              <th scope="row">{{ bank.name }}</th>
+              <td>{{ rate.date }}</td>
+              <td>{{ rate.usd_buy }}</td>
+              <td>{{ rate.usd_sell }}</td>
+              <td>{{ rate.eur_buy }}</td>
+              <td>{{ rate.eur_sell }}</td>
+            </tr>
+           {% endfor %}
+           </tbody>
+        </table>
+        </div>
+{% endblock %}
